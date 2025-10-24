@@ -1,0 +1,147 @@
+/* ---------------------------
+Variables CSS
+--------------------------- */
+:root {
+  --color-bg: #f0f4f8;
+  --color-header: #1e3a8a;
+  --color-text: #222222;
+  --color-link: #e63946;
+  --font-primary: 'Verdana', sans-serif;
+  --gap: 1.5rem;
+}
+
+/* ---------------------------
+Global Styles
+--------------------------- */
+body {
+  font-family: var(--font-primary);
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  margin: 0;
+  padding: 0;
+}
+
+header,
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: var(--color-header);
+  color: #fff;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin: 25px 0;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: var(--color-header);
+  margin: 30px 0 20px;
+  border-bottom: 2px solid var(--color-header);
+  padding-bottom: 5px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 18px;
+}
+
+/* Links */
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ---------------------------
+Responsive Images & Videos
+--------------------------- */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------------------------
+Video Wrapper
+--------------------------- */
+.videoWrapper {
+  position: relative;
+  padding-top: 25px;
+  height: 0;
+  margin-bottom: 25px;
+}
+
+.videoWrapper.ratio-16-9 {
+  padding-bottom: 56.25%;
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ---------------------------
+Landmarks Grid
+--------------------------- */
+.landmarks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--gap);
+  padding: 20px;
+  justify-items: center;
+}
+
+/* ---------------------------
+Landmark Cards
+--------------------------- */
+.landmark {
+  background-color: #ffe5d9;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.landmark:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.landmark img {
+  width: 100%;
+  height: auto;
+  border-bottom: 3px solid #ddd;
+}
+
+.landmark h3 {
+  margin: 12px 0;
+  font-size: 1.15rem;
+  color: #333333;
+}
+
+.landmark p {
+  padding: 0 10px 15px;
+  font-size: 0.95rem;
+  color: #555555;
+}
